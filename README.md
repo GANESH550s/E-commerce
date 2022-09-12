@@ -1,6 +1,6 @@
 # MERN Ecommerce Application
 
-<code style="color: red">Currently under construction for additional features</code>
+<code>Currently under construction for additional features</code>
 
 # Description
 
