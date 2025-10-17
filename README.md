@@ -19,32 +19,63 @@ Full-stack ecommerce application built with MERN stack. This project has two fea
 - Expressjs - Framework to handle routes and requests
 - Mongoose - MongoDB object modeling tool to model the database schema
 
-## Installation
+## Installation and Running
 
-After you cloned the repository do not start the application. To run the application fully you need to create a database and collection and provide your own database URI.
+Follow these steps to get the application running on your local machine.
 
-### Setup
+### 1. Clone the Repository
 
-- Go to MongoDB website and create a database and a collection named 'Items' and insert the data in the <code>server/ItemsCollection.js</code> file as a document.
-- Create a .env file in the server folder and type the following
-
-```
-    NODE_ENV = development
-    PORT = 5000
-    MONGO_URI = mongodb+srv://<your uri from mongodb website>
+```bash
+git clone <repository-url>
+cd mern-ecommerce
 ```
 
-### Running
+### 2. Install Dependencies
 
-After this you can run the project locally:
+You'll need to install dependencies for the server and the client separately.
 
-- To run the front end
-  - <code>cd client</code>
-  - <code>npm start</code>
-- To run the back end
-  - <code>cd server</code>
-  - <code>npm run dev</code>
-    TIP: Run both in split terminal so that you can see both ends running
+- **Root and Server Dependencies:**
+  ```bash
+  npm install
+  cd server
+  npm install
+  cd ..
+  ```
+
+- **Client Dependencies:**
+  ```bash
+  cd client
+  npm install
+  cd ..
+  ```
+
+### 3. Set Up Environment Variables
+
+- Go to the [MongoDB website](https://www.mongodb.com/), create a database, and get your connection string (URI).
+- In the `server` directory, create a file named `.env`.
+- Add your MongoDB URI to the `.env` file as shown below:
+
+  ```
+  MONGO_URI=your_mongodb_connection_string_here
+  ```
+
+### 4. Run the Application
+
+Open two separate terminals to run the backend server and the frontend client simultaneously.
+
+- **Terminal 1: Start the Server**
+  ```bash
+  cd server
+  npm run dev
+  ```
+
+- **Terminal 2: Start the Client**
+  ```bash
+  cd client
+  npm start
+  ```
+
+Your browser should open automatically to `http://localhost:3000`. The server will be running on `http://localhost:5000`.
 
 # Languages and tools
 
